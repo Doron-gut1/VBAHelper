@@ -1,0 +1,440 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{57271B16-62EB-469D-9CDF-EB7D4D7457A7}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Helper</RootNamespace>
+    <AssemblyName>VBAHelper</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>VBAHelper.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>VBAHelper.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DocumentationFile>VBAHelper.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DocumentationFile>VBAHelper.xml</DocumentationFile>
+    <Optimize>true</Optimize>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CalcArnProcess">
+      <HintPath>..\External Libraries\CalcArnProcess.dll</HintPath>
+    </Reference>
+    <Reference Include="CreditCardsManager, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External Libraries\CreditCardsManager.dll</HintPath>
+    </Reference>
+    <Reference Include="CreditGuard">
+      <HintPath>..\External Libraries\CreditGuard.dll</HintPath>
+    </Reference>
+    <Reference Include="CreditGuardClientExecuter, Version=1.0.0.0, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External Libraries\CreditGuardClientExecuter.dll</HintPath>
+    </Reference>
+    <Reference Include="CreditGuardGlobals">
+      <HintPath>..\External Libraries\CreditGuardGlobals.dll</HintPath>
+    </Reference>
+    <Reference Include="Epr.AradWaterStructures">
+      <HintPath>..\External Libraries\Epr.AradWaterStructures.dll</HintPath>
+    </Reference>
+    <Reference Include="Epr.EprRdp.Globals">
+      <HintPath>..\External Libraries\Epr.EprRdp.Globals.dll</HintPath>
+    </Reference>
+    <Reference Include="EprEmailSender">
+      <HintPath>..\External Libraries\EprEmailSender.dll</HintPath>
+    </Reference>
+    <Reference Include="EprTypes, Version=1.0.0.5, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External Libraries\EprTypes.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelImportManager">
+      <HintPath>..\External Libraries\ExcelImportManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build.Framework, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Build.Framework.17.13.9\lib\net472\Microsoft.Build.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Build.Utilities.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Build.Utilities.Core.16.0.461\lib\net472\Microsoft.Build.Utilities.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging">
+      <HintPath>..\External Libraries\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.7.0.0\lib\net462\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.IO.Redist, Version=6.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.IO.Redist.6.0.1\lib\net472\Microsoft.IO.Redist.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.NET.StringTools, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.NET.StringTools.17.13.9\lib\net472\Microsoft.NET.StringTools.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Access, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
+      <HintPath>.\Microsoft.Office.Interop.Access.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.Setup.Configuration.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.VisualStudio.Setup.Configuration.Interop.1.16.30\lib\net35\Microsoft.VisualStudio.Setup.Configuration.Interop.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="OdbcConverter">
+      <HintPath>..\External Libraries\OdbcConverter.dll</HintPath>
+    </Reference>
+    <Reference Include="RGiesecke.DllExport.Metadata, Version=1.0.0.0, Culture=neutral, PublicKeyToken=8f52d83c1a22df51, processorArchitecture=MSIL">
+      <HintPath>..\packages\UnmanagedExports.Repack.Upgrade.1.2.1\lib\net472\RGiesecke.DllExport.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="SendEmailManager">
+      <HintPath>..\External Libraries\SendEmailManager.dll</HintPath>
+    </Reference>
+    <Reference Include="SmsSender, Version=1.0.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External Libraries\SmsSender.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Buffers, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.5.1\lib\net461\System.Buffers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Collections.Immutable, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Collections.Immutable.8.0.0\lib\net462\System.Collections.Immutable.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=8.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.8.0.0\lib\net462\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Memory, Version=4.0.1.2, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.5\lib\net461\System.Memory.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.4.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.5.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.6.0.0\lib\net461\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Encodings.Web, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Encodings.Web.7.0.0\lib\net462\System.Text.Encodings.Web.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Text.Json, Version=7.0.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Text.Json.7.0.1\lib\net462\System.Text.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.4\lib\net461\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="TabuClient">
+      <HintPath>..\External Libraries\TabuClient.dll</HintPath>
+    </Reference>
+    <Reference Include="TabuRequestClient, Version=1.0.0.1, Culture=neutral, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External Libraries\TabuRequestClient.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Runtime" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AradWater\ApiArad.vb" />
+    <Compile Include="AradWater\AvFileStructure.vb" />
+    <Compile Include="AradWater\DalArad.vb" />
+    <Compile Include="AradWater\DsArad.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsArad.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="AradWater\DsArad.vb">
+      <DependentUpon>DsArad.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ClsEprRdp.vb" />
+    <Compile Include="ClsError.vb" />
+    <Compile Include="ClsGateway.vb" />
+    <Compile Include="ClsMain_AradWater.vb" />
+    <Compile Include="ClsMain_CreditGuard.vb" />
+    <Compile Include="ClsMain_EmailSender.vb" />
+    <Compile Include="ClsMain_SMS.vb" />
+    <Compile Include="ClsMain_Tabu.vb" />
+    <Compile Include="ClsMain_SendEmailManger.vb" />
+    <Compile Include="ClsMain_Utils.vb" />
+    <Compile Include="ClsReturn.vb" />
+    <Compile Include="CreditGuardClient\ClsAPIHKRegistrationResult.vb" />
+    <Compile Include="CreditGuardClient\ClsAPIPaymentResult.vb" />
+    <Compile Include="CreditGuardClient\ClsAPITransactionInquiryResult.vb" />
+    <Compile Include="CreditGuardClient\ClsAPIVerificationResult.vb" />
+    <Compile Include="CreditGuardClient\ClsAPIWebPageUrlGenerationResult.vb" />
+    <Compile Include="CreditGuardClient\ClsWebPagePaymentResult.vb" />
+    <Compile Include="CreditGuardClient\ClsWebPageVerificationResult.vb" />
+    <Compile Include="CreditGuardClient\ClsWebPageHKRegistrationResult.vb" />
+    <Compile Include="CreditGuardClient\EnmBrowserListenerLogLevel.vb" />
+    <Compile Include="CreditGuardClient\EnmCreditType.vb" />
+    <Compile Include="CreditGuardClient\EnmWebPageTransactionType.vb" />
+    <Compile Include="CreditGuardClient\EnmWebPageTransactionResult.vb" />
+    <Compile Include="EmailSender\DalEmail.vb" />
+    <Compile Include="EmailSender\DsEmail.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsEmail.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="EmailSender\EmailEnum.vb" />
+    <Compile Include="SmsManager\DalSms.vb" />
+    <Compile Include="SmsManager\DsSms.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsSms.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SmsManager\DsSms.vb">
+      <DependentUpon>DsSms.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="SmsManager\SmsEnum.vb" />
+    <Compile Include="SmsManager\SmsParams.vb" />
+    <Compile Include="SmsManager\SmsTypeFunctions.vb" />
+    <Compile Include="MdlUtils.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="AradWater\DsArad.xsc">
+      <DependentUpon>DsArad.xsd</DependentUpon>
+    </None>
+    <None Include="AradWater\DsArad.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsArad.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="AradWater\DsArad.xss">
+      <DependentUpon>DsArad.xsd</DependentUpon>
+    </None>
+    <None Include="EmailSender\DsEmail.xsc">
+      <DependentUpon>DsEmail.xsd</DependentUpon>
+    </None>
+    <None Include="EmailSender\DsEmail.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsEmail.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="EmailSender\DsEmail.xss">
+      <DependentUpon>DsEmail.xsd</DependentUpon>
+    </None>
+    <None Include="SmsManager\DsSms.xsc">
+      <DependentUpon>DsSms.xsd</DependentUpon>
+    </None>
+    <None Include="SmsManager\DsSms.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsSms.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="SmsManager\DsSms.xss">
+      <DependentUpon>DsSms.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="../packages/UnmanagedExports.1.2.7/tools/RGiesecke.DllExport.targets" Condition="Exists('../packages/UnmanagedExports.1.2.7/tools/RGiesecke.DllExport.targets')" />
+  <PropertyGroup>
+    <PostBuildEvent>echo Post-build events.
+
+echo Copying files from '.\External Libraries' to the output-directory.
+
+echo Copying CefSharp.dll .
+copy "$(SolutionDir)External Libraries\CefSharp.dll" "$(TargetDir)CefSharp.dll"
+
+echo Copying CefSharp.Core.dll .
+copy "$(SolutionDir)External Libraries\CefSharp.Core.dll" "$(TargetDir)CefSharp.Core.dll"
+
+echo Copying CefSharp.Core.Runtime.dll .
+copy "$(SolutionDir)External Libraries\CefSharp.Core.Runtime.dll" "$(TargetDir)CefSharp.Core.Runtime.dll"
+
+echo Copying CefSharp.WinForms.dll .
+copy "$(SolutionDir)External Libraries\CefSharp.WinForms.dll" "$(TargetDir)CefSharp.WinForms.dll"
+
+echo Copying CefSharp.BrowserSubprocess.Core.dll .
+copy "$(SolutionDir)External Libraries\CefSharp.BrowserSubprocess.Core.dll" "$(TargetDir)CefSharp.BrowserSubprocess.Core.dll"
+
+echo Copying CefSharp.BrowserSubprocess.exe .
+copy "$(SolutionDir)External Libraries\CefSharp.BrowserSubprocess.exe" "$(TargetDir)CefSharp.BrowserSubprocess.exe"
+
+echo Copying chrome_100_percent.pak .
+copy "$(SolutionDir)External Libraries\chrome_100_percent.pak" "$(TargetDir)chrome_100_percent.pak"
+
+echo Copying chrome_200_percent.pak .
+copy "$(SolutionDir)External Libraries\chrome_200_percent.pak" "$(TargetDir)chrome_200_percent.pak"
+
+echo Copying chrome_elf.dll .
+copy "$(SolutionDir)External Libraries\chrome_elf.dll" "$(TargetDir)chrome_elf.dll"
+
+echo Copying d3dcompiler_47.dll .
+copy "$(SolutionDir)External Libraries\d3dcompiler_47.dll" "$(TargetDir)d3dcompiler_47.dll"
+
+echo Copying icudtl.dat .
+copy "$(SolutionDir)External Libraries\icudtl.dat" "$(TargetDir)icudtl.dat"
+
+echo Copying libcef.dll .
+copy "$(SolutionDir)External Libraries\libcef.dll" "$(TargetDir)libcef.dll"
+
+echo Copying libEGL.dll .
+copy "$(SolutionDir)External Libraries\libEGL.dll" "$(TargetDir)libEGL.dll"
+
+echo Copying libGLESv2.dll .
+copy "$(SolutionDir)External Libraries\libGLESv2.dll" "$(TargetDir)libGLESv2.dll"
+
+echo Copying resources.pak .
+copy "$(SolutionDir)External Libraries\resources.pak" "$(TargetDir)resources.pak"
+
+echo Copying snapshot_blob.bin .
+copy "$(SolutionDir)External Libraries\snapshot_blob.bin" "$(TargetDir)snapshot_blob.bin"
+
+echo Copying v8_context_snapshot.bin .
+copy "$(SolutionDir)External Libraries\v8_context_snapshot.bin" "$(TargetDir)v8_context_snapshot.bin"
+
+echo Copying vk_swiftshader.dll .
+copy "$(SolutionDir)External Libraries\vk_swiftshader.dll" "$(TargetDir)vk_swiftshader.dll"
+
+echo Copying vk_swiftshader_icd.json .
+copy "$(SolutionDir)External Libraries\vk_swiftshader_icd.json" "$(TargetDir)vk_swiftshader_icd.json"
+
+echo Copying vulkan-1.dll .
+copy "$(SolutionDir)External Libraries\vulkan-1.dll" "$(TargetDir)vulkan-1.dll"
+
+echo Copying swiftshader\libEGL.dll and swiftshader\libGLESv2.dll.
+mkdir "$(TargetDir)swiftshader"
+copy "$(SolutionDir)External Libraries\swiftshader\libEGL.dll" "$(TargetDir)swiftshader\libEGL.dll"
+copy "$(SolutionDir)External Libraries\swiftshader\libGLESv2.dll" "$(TargetDir)swiftshader\libGLESv2.dll"
+
+echo Copying CGWebPageListener.exe .
+copy "$(SolutionDir)External Libraries\CGWebPageListener.exe" "$(TargetDir)CGWebPageListener.exe"
+
+echo Copying WebBrowser.dll .
+copy "$(SolutionDir)External Libraries\WebBrowser.dll" "$(TargetDir)WebBrowser.dll"
+
+echo Copying Mono.Options.dll .
+copy "$(SolutionDir)External Libraries\Mono.Options.dll" "$(TargetDir)Mono.Options.dll"
+
+echo Opening the output-directory in file-explorer.
+rem "", "$(TargetDir)"</PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\packages\UnmanagedExports.Repack.Upgrade.1.2.1\build\UnmanagedExports.Repack.Upgrade.targets" Condition="Exists('..\packages\UnmanagedExports.Repack.Upgrade.1.2.1\build\UnmanagedExports.Repack.Upgrade.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\UnmanagedExports.Repack.Upgrade.1.2.1\build\UnmanagedExports.Repack.Upgrade.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\UnmanagedExports.Repack.Upgrade.1.2.1\build\UnmanagedExports.Repack.Upgrade.targets'))" />
+  </Target>
+</Project>

@@ -1,0 +1,170 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{ADB0CBC8-A522-4A61-9E81-E8F3391D4F47}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>TestVBAHelper</RootNamespace>
+    <AssemblyName>TestVBAHelper</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>false</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <LangVersion>7.3</LangVersion>
+    <ErrorReport>prompt</ErrorReport>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Epr.AradWaterStructures, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\External Libraries\Epr.AradWaterStructures.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Helper\Helper.vbproj">
+      <Project>{57271b16-62eb-469d-9cdf-eb7d4d7457a7}</Project>
+      <Name>Helper</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>echo Post-build events.
+
+echo Copying files from '.\External Libraries' to the output-directory.
+
+echo Copying CefSharp.dll .
+copy "$(SolutionDir)External Libraries\CefSharp.dll" "$(TargetDir)CefSharp.dll"
+
+echo Copying CefSharp.Core.dll .
+copy "$(SolutionDir)External Libraries\CefSharp.Core.dll" "$(TargetDir)CefSharp.Core.dll"
+
+echo Copying CefSharp.Core.Runtime.dll .
+copy "$(SolutionDir)External Libraries\CefSharp.Core.Runtime.dll" "$(TargetDir)CefSharp.Core.Runtime.dll"
+
+echo Copying CefSharp.WinForms.dll .
+copy "$(SolutionDir)External Libraries\CefSharp.WinForms.dll" "$(TargetDir)CefSharp.WinForms.dll"
+
+echo Copying CefSharp.BrowserSubprocess.Core.dll .
+copy "$(SolutionDir)External Libraries\CefSharp.BrowserSubprocess.Core.dll" "$(TargetDir)CefSharp.BrowserSubprocess.Core.dll"
+
+echo Copying CefSharp.BrowserSubprocess.exe .
+copy "$(SolutionDir)External Libraries\CefSharp.BrowserSubprocess.exe" "$(TargetDir)CefSharp.BrowserSubprocess.exe"
+
+echo Copying chrome_100_percent.pak .
+copy "$(SolutionDir)External Libraries\chrome_100_percent.pak" "$(TargetDir)chrome_100_percent.pak"
+
+echo Copying chrome_200_percent.pak .
+copy "$(SolutionDir)External Libraries\chrome_200_percent.pak" "$(TargetDir)chrome_200_percent.pak"
+
+echo Copying chrome_elf.dll .
+copy "$(SolutionDir)External Libraries\chrome_elf.dll" "$(TargetDir)chrome_elf.dll"
+
+echo Copying d3dcompiler_47.dll .
+copy "$(SolutionDir)External Libraries\d3dcompiler_47.dll" "$(TargetDir)d3dcompiler_47.dll"
+
+echo Copying icudtl.dat .
+copy "$(SolutionDir)External Libraries\icudtl.dat" "$(TargetDir)icudtl.dat"
+
+echo Copying libcef.dll .
+copy "$(SolutionDir)External Libraries\libcef.dll" "$(TargetDir)libcef.dll"
+
+echo Copying libEGL.dll .
+copy "$(SolutionDir)External Libraries\libEGL.dll" "$(TargetDir)libEGL.dll"
+
+echo Copying libGLESv2.dll .
+copy "$(SolutionDir)External Libraries\libGLESv2.dll" "$(TargetDir)libGLESv2.dll"
+
+echo Copying resources.pak .
+copy "$(SolutionDir)External Libraries\resources.pak" "$(TargetDir)resources.pak"
+
+echo Copying snapshot_blob.bin .
+copy "$(SolutionDir)External Libraries\snapshot_blob.bin" "$(TargetDir)snapshot_blob.bin"
+
+echo Copying v8_context_snapshot.bin .
+copy "$(SolutionDir)External Libraries\v8_context_snapshot.bin" "$(TargetDir)v8_context_snapshot.bin"
+
+echo Copying vk_swiftshader.dll .
+copy "$(SolutionDir)External Libraries\vk_swiftshader.dll" "$(TargetDir)vk_swiftshader.dll"
+
+echo Copying vk_swiftshader_icd.json .
+copy "$(SolutionDir)External Libraries\vk_swiftshader_icd.json" "$(TargetDir)vk_swiftshader_icd.json"
+
+echo Copying vulkan-1.dll .
+copy "$(SolutionDir)External Libraries\vulkan-1.dll" "$(TargetDir)vulkan-1.dll"
+
+echo Copying swiftshader\libEGL.dll and swiftshader\libGLESv2.dll.
+mkdir "$(TargetDir)swiftshader"
+copy "$(SolutionDir)External Libraries\swiftshader\libEGL.dll" "$(TargetDir)swiftshader\libEGL.dll"
+copy "$(SolutionDir)External Libraries\swiftshader\libGLESv2.dll" "$(TargetDir)swiftshader\libGLESv2.dll"
+
+echo Copying CGWebPageListener.exe .
+copy "$(SolutionDir)External Libraries\CGWebPageListener.exe" "$(TargetDir)CGWebPageListener.exe"
+
+echo Copying WebBrowser.dll .
+copy "$(SolutionDir)External Libraries\WebBrowser.dll" "$(TargetDir)WebBrowser.dll"
+
+echo Copying Mono.Options.dll .
+copy "$(SolutionDir)External Libraries\Mono.Options.dll" "$(TargetDir)Mono.Options.dll"
+
+echo Opening the output-directory in file-explorer.
+REM start "", "$(TargetDir)"*/</PostBuildEvent>
+  </PropertyGroup>
+</Project>

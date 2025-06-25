@@ -1,0 +1,96 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Helper", "Helper\Helper.vbproj", "{57271B16-62EB-469D-9CDF-EB7D4D7457A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestVBAHelper", "TestVBAHelper\TestVBAHelper.csproj", "{ADB0CBC8-A522-4A61-9E81-E8F3391D4F47}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External Libraries", "External Libraries", "{85C5C36E-5A99-44CB-AB16-34A36543A551}"
+	ProjectSection(SolutionItems) = preProject
+		External Libraries\BouncyCastle.Crypto.dll = External Libraries\BouncyCastle.Crypto.dll
+		External Libraries\CefSharp.BrowserSubprocess.Core.dll = External Libraries\CefSharp.BrowserSubprocess.Core.dll
+		External Libraries\CefSharp.BrowserSubprocess.exe = External Libraries\CefSharp.BrowserSubprocess.exe
+		External Libraries\CefSharp.Core.dll = External Libraries\CefSharp.Core.dll
+		External Libraries\CefSharp.Core.Runtime.dll = External Libraries\CefSharp.Core.Runtime.dll
+		External Libraries\CefSharp.dll = External Libraries\CefSharp.dll
+		External Libraries\CefSharp.WinForms.dll = External Libraries\CefSharp.WinForms.dll
+		External Libraries\CGRequestBuilder.dll = External Libraries\CGRequestBuilder.dll
+		External Libraries\CGResponseParser.dll = External Libraries\CGResponseParser.dll
+		External Libraries\CGWebPageExecuter.dll = External Libraries\CGWebPageExecuter.dll
+		External Libraries\CGWebPageGlobals.dll = External Libraries\CGWebPageGlobals.dll
+		External Libraries\CGWebPageListener.exe = External Libraries\CGWebPageListener.exe
+		External Libraries\chrome_100_percent.pak = External Libraries\chrome_100_percent.pak
+		External Libraries\chrome_200_percent.pak = External Libraries\chrome_200_percent.pak
+		External Libraries\chrome_elf.dll = External Libraries\chrome_elf.dll
+		External Libraries\CreditCardsManager.dll = External Libraries\CreditCardsManager.dll
+		External Libraries\CreditGuard.dll = External Libraries\CreditGuard.dll
+		External Libraries\CreditGuardAPIClient.dll = External Libraries\CreditGuardAPIClient.dll
+		External Libraries\CreditGuardClientExecuter.dll = External Libraries\CreditGuardClientExecuter.dll
+		External Libraries\CreditGuardGlobals.dll = External Libraries\CreditGuardGlobals.dll
+		External Libraries\d3dcompiler_47.dll = External Libraries\d3dcompiler_47.dll
+		External Libraries\Epr.AradWaterStructures.dll = External Libraries\Epr.AradWaterStructures.dll
+		External Libraries\Epr.EprRdp.Globals.dll = External Libraries\Epr.EprRdp.Globals.dll
+		External Libraries\EprTypes.dll = External Libraries\EprTypes.dll
+		External Libraries\icudtl.dat = External Libraries\icudtl.dat
+		External Libraries\libcef.dll = External Libraries\libcef.dll
+		External Libraries\libEGL.dll = External Libraries\libEGL.dll
+		External Libraries\libGLESv2.dll = External Libraries\libGLESv2.dll
+		External Libraries\Microsoft.Extensions.Logging.Abstractions.dll = External Libraries\Microsoft.Extensions.Logging.Abstractions.dll
+		External Libraries\Microsoft.Extensions.Logging.dll = External Libraries\Microsoft.Extensions.Logging.dll
+		External Libraries\Mono.Options.dll = External Libraries\Mono.Options.dll
+		External Libraries\OdbcConverter.dll = External Libraries\OdbcConverter.dll
+		External Libraries\resources.pak = External Libraries\resources.pak
+		External Libraries\SmsSender.dll = External Libraries\SmsSender.dll
+		External Libraries\snapshot_blob.bin = External Libraries\snapshot_blob.bin
+		External Libraries\System.Buffers.dll = External Libraries\System.Buffers.dll
+		External Libraries\TabuRequestClient.dll = External Libraries\TabuRequestClient.dll
+		External Libraries\v8_context_snapshot.bin = External Libraries\v8_context_snapshot.bin
+		External Libraries\vk_swiftshader.dll = External Libraries\vk_swiftshader.dll
+		External Libraries\vulkan-1.dll = External Libraries\vulkan-1.dll
+		Dlls\WaterInterface.dll = Dlls\WaterInterface.dll
+		External Libraries\WebBrowser.dll = External Libraries\WebBrowser.dll
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "swiftshader", "swiftshader", "{B3B6B7E7-ABB2-440D-9C9C-C00BDB134B1E}"
+	ProjectSection(SolutionItems) = preProject
+		External Libraries\swiftshader\libEGL.dll = External Libraries\swiftshader\libEGL.dll
+		External Libraries\swiftshader\libGLESv2.dll = External Libraries\swiftshader\libGLESv2.dll
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57271B16-62EB-469D-9CDF-EB7D4D7457A7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57271B16-62EB-469D-9CDF-EB7D4D7457A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57271B16-62EB-469D-9CDF-EB7D4D7457A7}.Debug|x86.ActiveCfg = Debug|x86
+		{57271B16-62EB-469D-9CDF-EB7D4D7457A7}.Debug|x86.Build.0 = Debug|x86
+		{57271B16-62EB-469D-9CDF-EB7D4D7457A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57271B16-62EB-469D-9CDF-EB7D4D7457A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{57271B16-62EB-469D-9CDF-EB7D4D7457A7}.Release|x86.ActiveCfg = Release|x86
+		{57271B16-62EB-469D-9CDF-EB7D4D7457A7}.Release|x86.Build.0 = Release|x86
+		{ADB0CBC8-A522-4A61-9E81-E8F3391D4F47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADB0CBC8-A522-4A61-9E81-E8F3391D4F47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADB0CBC8-A522-4A61-9E81-E8F3391D4F47}.Debug|x86.ActiveCfg = Debug|x86
+		{ADB0CBC8-A522-4A61-9E81-E8F3391D4F47}.Debug|x86.Build.0 = Debug|x86
+		{ADB0CBC8-A522-4A61-9E81-E8F3391D4F47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADB0CBC8-A522-4A61-9E81-E8F3391D4F47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ADB0CBC8-A522-4A61-9E81-E8F3391D4F47}.Release|x86.ActiveCfg = Release|x86
+		{ADB0CBC8-A522-4A61-9E81-E8F3391D4F47}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B3B6B7E7-ABB2-440D-9C9C-C00BDB134B1E} = {85C5C36E-5A99-44CB-AB16-34A36543A551}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {AF376D37-3ADF-439E-B001-4ED683A9F3D2}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsSms" targetNamespace="http://tempuri.org/DsSms.xsd" xmlns:mstns="http://tempuri.org/DsSms.xsd" xmlns="http://tempuri.org/DsSms.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="BrnGviaDevConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="BrnGviaDevConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.Helper.My.MySettings.GlobalReference.Default.BrnGviaDevConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsSms" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_UserDSName="DsSms" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="DsSms">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ParamSmsType" msprop:Generator_RowEvHandlerName="ParamSmsTypeRowChangeEventHandler" msprop:Generator_RowDeletedName="ParamSmsTypeRowDeleted" msprop:Generator_RowDeletingName="ParamSmsTypeRowDeleting" msprop:Generator_RowEvArgName="ParamSmsTypeRowChangeEvent" msprop:Generator_TablePropName="ParamSmsType" msprop:Generator_RowChangedName="ParamSmsTypeRowChanged" msprop:Generator_UserTableName="ParamSmsType" msprop:Generator_RowChangingName="ParamSmsTypeRowChanging" msprop:Generator_RowClassName="ParamSmsTypeRow" msprop:Generator_TableClassName="ParamSmsTypeDataTable" msprop:Generator_TableVarName="tableParamSmsType">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="SmsType" msprop:Generator_ColumnPropNameInTable="SmsTypeColumn" msprop:Generator_ColumnPropNameInRow="SmsType" msprop:Generator_UserColumnName="SmsType" msprop:Generator_ColumnVarNameInTable="columnSmsType" type="xs:int" />
+              <xs:element name="SmsTypeDesc" msprop:Generator_ColumnPropNameInTable="SmsTypeDescColumn" msprop:Generator_ColumnPropNameInRow="SmsTypeDesc" msprop:Generator_UserColumnName="SmsTypeDesc" msprop:Generator_ColumnVarNameInTable="columnSmsTypeDesc">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="30" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SmsIsActive" msprop:Generator_ColumnPropNameInTable="SmsIsActiveColumn" msprop:Generator_ColumnPropNameInRow="SmsIsActive" msprop:Generator_UserColumnName="SmsIsActive" msprop:Generator_ColumnVarNameInTable="columnSmsIsActive" type="xs:int" />
+              <xs:element name="SmsSender" msprop:Generator_ColumnPropNameInTable="SmsSenderColumn" msprop:Generator_ColumnPropNameInRow="SmsSender" msprop:Generator_UserColumnName="SmsSender" msprop:Generator_ColumnVarNameInTable="columnSmsSender">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="20" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SmsHeaderText" msprop:Generator_ColumnPropNameInTable="SmsHeaderTextColumn" msprop:Generator_ColumnPropNameInRow="SmsHeaderText" msprop:Generator_UserColumnName="SmsHeaderText" msprop:Generator_ColumnVarNameInTable="columnSmsHeaderText">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SmsUrl" msprop:Generator_ColumnPropNameInTable="SmsUrlColumn" msprop:Generator_ColumnPropNameInRow="SmsUrl" msprop:Generator_UserColumnName="SmsUrl" msprop:Generator_ColumnVarNameInTable="columnSmsUrl">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="250" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="SmsFooterText" msprop:Generator_ColumnPropNameInTable="SmsFooterTextColumn" msprop:Generator_ColumnPropNameInRow="SmsFooterText" msprop:Generator_UserColumnName="SmsFooterText" msprop:Generator_ColumnVarNameInTable="columnSmsFooterText">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="200" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="NetworkFolder" msprop:Generator_ColumnPropNameInTable="NetworkFolderColumn" msprop:Generator_ColumnPropNameInRow="NetworkFolder" msprop:Generator_UserColumnName="NetworkFolder" msprop:Generator_ColumnVarNameInTable="columnNetworkFolder">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="InvoiceLink" msprop:Generator_RowEvHandlerName="InvoiceLinkRowChangeEventHandler" msprop:Generator_RowDeletedName="InvoiceLinkRowDeleted" msprop:Generator_RowDeletingName="InvoiceLinkRowDeleting" msprop:Generator_RowEvArgName="InvoiceLinkRowChangeEvent" msprop:Generator_TablePropName="InvoiceLink" msprop:Generator_RowChangedName="InvoiceLinkRowChanged" msprop:Generator_UserTableName="InvoiceLink" msprop:Generator_RowChangingName="InvoiceLinkRowChanging" msprop:Generator_RowClassName="InvoiceLinkRow" msprop:Generator_TableClassName="InvoiceLinkDataTable" msprop:Generator_TableVarName="tableInvoiceLink">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="InvoiceId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="InvoiceIdColumn" msprop:Generator_ColumnPropNameInRow="InvoiceId" msprop:Generator_UserColumnName="InvoiceId" msprop:Generator_ColumnVarNameInTable="columnInvoiceId" type="xs:int" />
+              <xs:element name="InvoiceNum" msprop:Generator_ColumnPropNameInTable="InvoiceNumColumn" msprop:Generator_ColumnPropNameInRow="InvoiceNum" msprop:Generator_UserColumnName="InvoiceNum" msprop:Generator_ColumnVarNameInTable="columnInvoiceNum" type="xs:int" />
+              <xs:element name="InvoiceGuid" msdata:DataType="System.Guid, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" msprop:Generator_ColumnPropNameInTable="InvoiceGuidColumn" msprop:Generator_ColumnPropNameInRow="InvoiceGuid" msprop:Generator_UserColumnName="InvoiceGuid" msprop:Generator_ColumnVarNameInTable="columnInvoiceGuid" type="xs:string" />
+              <xs:element name="InvoiceFileSize" msprop:Generator_ColumnPropNameInTable="InvoiceFileSizeColumn" msprop:Generator_ColumnPropNameInRow="InvoiceFileSize" msprop:Generator_UserColumnName="InvoiceFileSize" msprop:Generator_ColumnVarNameInTable="columnInvoiceFileSize" type="xs:int" />
+              <xs:element name="Url" msprop:Generator_ColumnPropNameInTable="UrlColumn" msprop:Generator_ColumnPropNameInRow="Url" msprop:Generator_UserColumnName="Url" msprop:Generator_ColumnVarNameInTable="columnUrl">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShortUrl" msprop:Generator_ColumnPropNameInTable="ShortUrlColumn" msprop:Generator_ColumnPropNameInRow="ShortUrl" msprop:Generator_UserColumnName="ShortUrl" msprop:Generator_ColumnVarNameInTable="columnShortUrl" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsActiveRow" msprop:Generator_ColumnPropNameInTable="IsActiveRowColumn" msprop:Generator_ColumnPropNameInRow="IsActiveRow" msprop:Generator_UserColumnName="IsActiveRow" msprop:Generator_ColumnVarNameInTable="columnIsActiveRow" type="xs:boolean" />
+              <xs:element name="RowDateCreated" msprop:Generator_ColumnPropNameInTable="RowDateCreatedColumn" msprop:Generator_ColumnPropNameInRow="RowDateCreated" msprop:Generator_UserColumnName="RowDateCreated" msprop:Generator_ColumnVarNameInTable="columnRowDateCreated" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ShovarLink" msprop:Generator_RowEvHandlerName="ShovarLinkRowChangeEventHandler" msprop:Generator_RowDeletedName="ShovarLinkRowDeleted" msprop:Generator_RowDeletingName="ShovarLinkRowDeleting" msprop:Generator_RowEvArgName="ShovarLinkRowChangeEvent" msprop:Generator_TablePropName="ShovarLink" msprop:Generator_RowChangedName="ShovarLinkRowChanged" msprop:Generator_UserTableName="ShovarLink" msprop:Generator_RowChangingName="ShovarLinkRowChanging" msprop:Generator_RowClassName="ShovarLinkRow" msprop:Generator_TableClassName="ShovarLinkDataTable" msprop:Generator_TableVarName="tableShovarLink">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="ShovarId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnPropNameInTable="ShovarIdColumn" msprop:Generator_ColumnPropNameInRow="ShovarId" msprop:Generator_UserColumnName="ShovarId" msprop:Generator_ColumnVarNameInTable="columnShovarId" type="xs:int" />
+              <xs:element name="ShovarNum" msprop:Generator_ColumnPropNameInTable="ShovarNumColumn" msprop:Generator_ColumnPropNameInRow="ShovarNum" msprop:Generator_UserColumnName="ShovarNum" msprop:Generator_ColumnVarNameInTable="columnShovarNum" type="xs:int" />
+              <xs:element name="maintz" msprop:Generator_ColumnPropNameInTable="maintzColumn" msprop:Generator_ColumnPropNameInRow="maintz" msprop:Generator_UserColumnName="maintz" msprop:Generator_ColumnVarNameInTable="columnmaintz" type="xs:long" />
+              <xs:element name="Url" msprop:Generator_ColumnPropNameInTable="UrlColumn" msprop:Generator_ColumnPropNameInRow="Url" msprop:Generator_UserColumnName="Url" msprop:Generator_ColumnVarNameInTable="columnUrl">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="120" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="ShortUrl" msprop:Generator_ColumnPropNameInTable="ShortUrlColumn" msprop:Generator_ColumnPropNameInRow="ShortUrl" msprop:Generator_UserColumnName="ShortUrl" msprop:Generator_ColumnVarNameInTable="columnShortUrl" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="60" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="IsActiveRow" msprop:Generator_ColumnPropNameInTable="IsActiveRowColumn" msprop:Generator_ColumnPropNameInRow="IsActiveRow" msprop:Generator_UserColumnName="IsActiveRow" msprop:Generator_ColumnVarNameInTable="columnIsActiveRow" type="xs:boolean" />
+              <xs:element name="RowDateCreated" msprop:Generator_ColumnPropNameInTable="RowDateCreatedColumn" msprop:Generator_ColumnPropNameInRow="RowDateCreated" msprop:Generator_UserColumnName="RowDateCreated" msprop:Generator_ColumnVarNameInTable="columnRowDateCreated" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="ShvaHkUnacceptableSmsData" msprop:Generator_RowEvHandlerName="ShvaHkUnacceptableSmsDataRowChangeEventHandler" msprop:Generator_RowDeletedName="ShvaHkUnacceptableSmsDataRowDeleted" msprop:Generator_RowDeletingName="ShvaHkUnacceptableSmsDataRowDeleting" msprop:Generator_RowEvArgName="ShvaHkUnacceptableSmsDataRowChangeEvent" msprop:Generator_TablePropName="ShvaHkUnacceptableSmsData" msprop:Generator_RowChangedName="ShvaHkUnacceptableSmsDataRowChanged" msprop:Generator_UserTableName="ShvaHkUnacceptableSmsData" msprop:Generator_RowChangingName="ShvaHkUnacceptableSmsDataRowChanging" msprop:Generator_RowClassName="ShvaHkUnacceptableSmsDataRow" msprop:Generator_TableClassName="ShvaHkUnacceptableSmsDataDataTable" msprop:Generator_TableVarName="tableShvaHkUnacceptableSmsData">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="mntname" msprop:Generator_ColumnPropNameInTable="mntnameColumn" msprop:Generator_ColumnPropNameInRow="mntname" msprop:Generator_UserColumnName="mntname" msprop:Generator_ColumnVarNameInTable="columnmntname" type="xs:string" minOccurs="0" />
+              <xs:element name="last4krts" msprop:Generator_ColumnPropNameInTable="last4krtsColumn" msprop:Generator_ColumnPropNameInRow="last4krts" msprop:Generator_UserColumnName="last4krts" msprop:Generator_ColumnVarNameInTable="columnlast4krts" type="xs:string" minOccurs="0" />
+              <xs:element name="stat" msprop:Generator_ColumnPropNameInTable="statColumn" msprop:Generator_ColumnPropNameInRow="stat" msprop:Generator_UserColumnName="stat" msprop:Generator_ColumnVarNameInTable="columnstat" type="xs:string" minOccurs="0" />
+              <xs:element name="ntel" msprop:Generator_ColumnPropNameInTable="ntelColumn" msprop:Generator_ColumnPropNameInRow="ntel" msprop:Generator_UserColumnName="ntel" msprop:Generator_ColumnVarNameInTable="columnntel" type="xs:string" minOccurs="0" />
+              <xs:element name="hksum" msprop:Generator_ColumnPropNameInTable="hksumColumn" msprop:Generator_ColumnPropNameInRow="hksum" msprop:Generator_UserColumnName="hksum" msprop:Generator_ColumnVarNameInTable="columnhksum" type="xs:double" minOccurs="0" />
+              <xs:element name="msg" msprop:Generator_ColumnPropNameInTable="msgColumn" msprop:Generator_ColumnPropNameInRow="msg" msprop:Generator_UserColumnName="msg" msprop:Generator_ColumnVarNameInTable="columnmsg" type="xs:string" minOccurs="0" />
+              <xs:element name="Sent" msprop:Generator_ColumnPropNameInTable="SentColumn" msprop:Generator_ColumnPropNameInRow="Sent" msprop:Generator_UserColumnName="Sent" msprop:Generator_ColumnVarNameInTable="columnSent" type="xs:int" minOccurs="0" />
+              <xs:element name="mspkod" msprop:Generator_ColumnPropNameInTable="mspkodColumn" msprop:Generator_ColumnPropNameInRow="mspkod" msprop:Generator_UserColumnName="mspkod" msprop:Generator_ColumnVarNameInTable="columnmspkod" type="xs:string" />
+              <xs:element name="hkhs" msprop:Generator_ColumnPropNameInTable="hkhsColumn" msprop:Generator_ColumnPropNameInRow="hkhs" msprop:Generator_UserColumnName="hkhs" msprop:Generator_ColumnVarNameInTable="columnhkhs" type="xs:string" />
+              <xs:element name="thum" msprop:Generator_ColumnPropNameInTable="thumColumn" msprop:Generator_ColumnPropNameInRow="thum" msprop:Generator_UserColumnName="thum" msprop:Generator_ColumnVarNameInTable="columnthum" type="xs:int" />
+              <xs:element name="sendnum" msprop:Generator_ColumnPropNameInTable="sendnumColumn" msprop:Generator_ColumnPropNameInRow="sendnum" msprop:Generator_UserColumnName="sendnum" msprop:Generator_ColumnVarNameInTable="columnsendnum" type="xs:string" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ParamSmsType" />
+      <xs:field xpath="mstns:SmsType" />
+    </xs:unique>
+    <xs:unique name="InvoiceLink_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:InvoiceLink" />
+      <xs:field xpath="mstns:InvoiceId" />
+    </xs:unique>
+    <xs:unique name="ShovarLink_Constraint1" msdata:ConstraintName="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:ShovarLink" />
+      <xs:field xpath="mstns:ShovarId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
