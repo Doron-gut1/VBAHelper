@@ -60,7 +60,7 @@ namespace TestVBAHelper
             bool midgam = false;
             bool midgamAuto = false;
             ClsMain cls = new ClsMain();
-            ClsReturn ret = cls.SendShovarHovLinkSms(9999,"brngviadev",true);
+            // ClsReturn ret = cls.SendShovarHovLinkSms(9999,"brngviadev",true);
 
 
             //ClsReturn ret = cls.SendShvaHkUnacceptableSms(1010, 309, "Test_050924-123456","בדיקה2", "BrnGviaDev");
@@ -70,8 +70,7 @@ namespace TestVBAHelper
             //ClsReturn ret = cls.RemoveMoneWtr("12121212", "10.08",DateTime.Parse("14/06/23"),1, "BrnGviaDev");
             //ClsReturn ret = cls.CrossMoneWtr("34567", "123456", "BrnGviaDev");
 
-            //ClsReturn ret = cls.ShowMtfProcess(270, "doron", "brngviadev", 277, 277, "0", 0, 0, noEmail, midgam, midgamAuto,10);
-            // ClsReturn ret = cls.MtfEmailProcess(270, "doron", "brngviadev", 277, 277, "4059600", 7837, 0,0);
+            ClsReturn ret = cls.ShowMtfProcess(270, "doron", "RngGviaWtr_Udi_160624", 305, 305, "0", 153, 0, noEmail, midgam, midgamAuto, -1, 7);          // ClsReturn ret = cls.MtfEmailProcess(270, "doron", "brngviadev", 277, 277, "4059600", 7837, 0,0);
             //	ClsReturn ret = cls.BuildAvFile("");
             //	//ClsReturn ret = cls.GetReadsFile("2023-05-01", null, "BrnGviaDev");
             //	//ClsReturn ret = cls.CrossMoneWtr("123", "456", "brnGviaDev");
