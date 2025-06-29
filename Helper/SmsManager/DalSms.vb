@@ -568,14 +568,14 @@ Namespace SmsManager
             Using sqlConn As SqlConnection = New SqlConnection(SqlConnString)
                 Try
                     sqlConn.Open()
-                    Dim query As String = "SELECT TOP 1 atareprnum FROM param1"
+                    Dim query As String = "select atareprnum from paramnext"
                     Using cmd As SqlCommand = New SqlCommand(query, sqlConn)
                         Dim result = cmd.ExecuteScalar()
                         If result IsNot Nothing AndAlso Not IsDBNull(result) Then
                             Return CInt(result)
                         End If
                     End Using
-                    Return 1 ' ערך ברירת מחדל
+                    Return 0 ' ערך ברירת מחדל
                 Catch ex As Exception
                     errDesc = TraceException(ex.Message)
                     Return 1

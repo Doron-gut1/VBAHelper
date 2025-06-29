@@ -619,7 +619,10 @@ Namespace SmsManager
 			Try
 				' קבלת מספר רשות מהפרמטרים או מה-DB
 				shovarRashut = m_DalSms.GetRashutNumber(errDesc)
-
+				If shovarRashut = 0 Then
+					errDesc = "atareprnum =0 צריך לעדכן מספר רשות באתר, היעזר בתמיכה."
+					Throw New Exception(errDesc)
+				End If
 				' קבלת רשומות לעיבוד
 				If isRecovery Then
 					' במצב התאוששות - מביאים כל רשומה שלא בסטטוס 2 או 3
